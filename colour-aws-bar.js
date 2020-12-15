@@ -16,20 +16,20 @@
     var prodBgColour = '#FF0000';
 
     var accounts = {
-        nonProdAccounts: ['my-nonprod-account'],
-        prodAccounts: ['my-prod-account']
+        nonProdAccounts: ['0123456789'],
+        prodAccounts: ['9876543210']
     };
 
-    var accountName = getAccountName();
+    var accountNumber = getAccountNumber();
 
-    if (accounts.prodAccounts.includes(accountName)) {
+    if (accounts.prodAccounts.includes(accountNumber)) {
         changeNavBarColour(prodBgColour);
-    } else if (accounts.nonProdAccounts.includes(accountName)) {
+    } else if (accounts.nonProdAccounts.includes(accountNumber)) {
         changeNavBarColour(nonProdBgColour);
     }
 
-    function getAccountName() {
-        var accountElem = document.getElementById('awsc-login-display-name-account');
+    function getAccountNumber() {
+        var accountElem = document.querySelector('[data-testid="aws-my-account-details"');
         if (accountElem == null) {
             console.log('no account element');
             return '';
