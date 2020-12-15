@@ -29,7 +29,7 @@
     }
 
     function getAccountNumber() {
-        var accountElem = document.querySelector('[data-testid="aws-my-account-details"');
+        var accountElem = document.querySelector('[data-testid="aws-my-account-details"]');
         if (accountElem == null) {
             console.log('no account element');
             return '';
