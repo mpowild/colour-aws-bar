@@ -39,7 +39,7 @@
     }
 
     function changeNavBarColour(newBgColour) {
-        var navSelector = '#nav-menubar, #nav-menu-right, .nav-menu, .nav-menu-separator';
+        var navSelector = '#awsc-nav-header';
         var menuBarElems = document.querySelectorAll(navSelector);
         for (var i = 0; i < menuBarElems.length; i++) {
             menuBarElems[i].style.backgroundColor = newBgColour;
